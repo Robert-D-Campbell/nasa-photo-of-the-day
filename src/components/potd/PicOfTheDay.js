@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styled from "styled-components";
+
 import PotdCard from "../potd/PotdCard";
 
 export default function PicOfTheDay() {
@@ -19,13 +21,44 @@ export default function PicOfTheDay() {
   }, []);
 
   return (
-    <div className="potd-container">
+    <PotdWrapper className="potd-wrapper">
+      <h1> NASA PHOTO OF THE DAY API! </h1>
       <PotdCard
         title={potd.title}
         date={potd.date}
         hdUrl={potd.hdurl}
         explanation={potd.explanation}
       />
-    </div>
+    </PotdWrapper>
   );
 }
+const PotdWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  .potd-card {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #b3cde0;
+    .potd {
+      margin: 0 auto;
+      max-width: 600px;
+      max-height: auto;
+    }
+    h2 {
+      font-size: 2.4rem;
+      margin: 4% auto 0;
+    }
+    h3 {
+      font-size: 1.6rem;
+    }
+    p {
+      padding: 0 10%;
+      max-width: 1000px;
+      font-size: 1.4rem;
+    }
+  }
+`;

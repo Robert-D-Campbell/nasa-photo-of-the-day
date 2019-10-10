@@ -3,7 +3,7 @@ import React from "react";
 const RoverCard = props => {
   return (
     <div className="rover-card">
-      <h2>Rover Name: {props.rover}</h2>
+      <h2>Rover: {props.rover}</h2>
       <h3>Status: {props.status}</h3>
       <img
         className="roverImage"
