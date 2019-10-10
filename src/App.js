@@ -1,13 +1,14 @@
 import React from "react";
+
 import "./App.css";
+import PicOfTheDay from "./components/potd/PicOfTheDay";
+import RoverGrid from "./components/library/RoverGrid";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <PicOfTheDay />
+      <RoverGrid />
     </div>
   );
 }
