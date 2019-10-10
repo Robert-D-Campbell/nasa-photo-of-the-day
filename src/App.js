@@ -48,7 +48,13 @@ const AppStyles = styled.div`
     text-align: center;
     font-size: 2.8rem;
     border-bottom: 1px solid #b3cde0;
-    width: 1000px;
+    width: 80%;
+    @media (max-width: 567px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 405px) {
+      font-size: 1.5rem;
+    }
   }
 `;
 

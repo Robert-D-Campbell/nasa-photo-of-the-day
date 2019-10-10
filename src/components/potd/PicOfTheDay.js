@@ -35,7 +35,7 @@ export default function PicOfTheDay() {
 const PotdWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1440px;
+  max-width: 100%;
   .potd-card {
     margin: 0 auto;
     display: flex;
@@ -46,15 +46,26 @@ const PotdWrapper = styled.div`
     .potd {
       margin: 0 auto;
       max-width: 600px;
+      width: 80%;
       max-height: auto;
     }
     h2 {
       font-size: 2.4rem;
       margin: 4% auto 0;
+      @media (max-width: 567px) {
+        font-size: 1.8rem;
+      }
+      @media (max-width: 405px) {
+        font-size: 1.4rem;
+      }
     }
     h3 {
       font-size: 1.6rem;
+      @media (max-width: 405px) {
+        font-size: 1.2rem;
+      }
     }
+
     p {
       padding: 0 10%;
       max-width: 1000px;
